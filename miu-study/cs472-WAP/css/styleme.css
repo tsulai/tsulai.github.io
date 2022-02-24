@@ -1,0 +1,39 @@
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #111c6e;
+    font-size: 1.6em;
+}
+.highlight{
+    color: rgb(139, 93, 23);
+    font-weight: bold;
+    font-style: italic;
+}
+p::first-letter{
+  font-size: 1.5em;  
+}
+dl dt{
+    color: rgb(139, 93, 23);
+    font-weight: bold;
+}
+body .main {    
+    text-align: left;
+    line-height: 22px;
+    
+}
+body .main section{
+    padding: 40px;
+}
+body .main section article{
+    margin-bottom: 30px;;
+}
+
+ol.reverse{
+    counter-reset: my-custom-counter 5;
+    list-style: none;
+}
+ol.reverse li{
+    counter-increment: my-custom-counter -1;
+}
+ol.reverse li::before {
+    content: counter(my-custom-counter) '. ';
+  }

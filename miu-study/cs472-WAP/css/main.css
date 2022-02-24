@@ -1,10 +1,13 @@
 body{
     background: #5B5E73;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 13px;
-    color: #424458;
+    font-size: 14px;
+    color: #222331;
     margin:0px;
     text-align: center;
+}
+h2, h3{
+    color: #111c6e;
 }
 ul li{
     line-height: 22px;
@@ -36,7 +39,6 @@ body .main .profile{
 
 body .main .profile img.me{
     border-radius: 50%; 
-    box-shadow: #dddddd;
     border: solid 10px #5B5E73;
     width: 190px; 
 }
