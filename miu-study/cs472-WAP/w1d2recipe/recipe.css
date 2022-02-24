@@ -1,8 +1,10 @@
+/*Su Lai Myint - 613735
+    W1D3 Recipe Lab
+*/
 body{
     background: white url(image/silverware.jpg) repeat;
     color: #404040;
-    font-size: 11pt;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font: 11pt Georgia, 'Times New Roman', Times, serif;
 }
 body .wrapper{
     width: 1000px;
@@ -37,5 +39,11 @@ ul{
 blockquote{
     background-color: #FFFFA8;
     font-style: italic;
+}
+.pop-txt{
+    font-weight: bold;
+}
+.del-line{
+    text-decoration: line-through;
 }
 

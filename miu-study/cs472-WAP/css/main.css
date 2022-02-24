@@ -69,7 +69,7 @@ body .main  a{
     color: #060f7c;
 }
 body .main a:hover{
-    color: #be8e63;
+    color: rgb(202, 122, 3);
     text-decoration: underline;
 }
 
