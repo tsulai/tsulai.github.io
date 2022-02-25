@@ -11,6 +11,7 @@ h1{
     font: 24pt Verdana, Tahoma, sans-serif;
     text-shadow: 3px 3px #999999;
     text-align: center;
+    font-weight: bold;
 }
 body .banner{
     background: url('images/bannerbg.png') repeat-x;
