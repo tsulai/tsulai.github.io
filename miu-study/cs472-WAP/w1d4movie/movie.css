@@ -1,0 +1,114 @@
+/*Su Lai Myint - 613735
+    W1D4 Assignment 3 Moview Review Page
+*/
+html body{
+    margin:0px;
+    padding: 0px;
+    font: 8pt Verdana, Tahoma, sans-serif;
+    background: url('images/background.png') repeat;
+}
+h1{
+    font: 24pt Verdana, Tahoma, sans-serif;
+    text-shadow: 3px 3px #999999;
+    text-align: center;
+}
+body .banner{
+    background: url('images/bannerbg.png') repeat-x;
+    text-align: center;
+}
+body .wrapper{
+    width: 800px;
+    margin: auto;
+}
+body .wrapper .cnt-main{
+    border: solid 4px gray;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 546px 246px;
+    grid-template-areas: 
+        "cntLFT cntRGT"
+        "cntFoot cntFoot"
+}
+.cnt-main .cnt-lft, #cntLFT {
+    border: solid 0px red;
+    grid-area: cntLFT;
+}
+.cnt-main .cnt-lft .rottenbig{
+    background: url('images/rbg.png')  repeat-x;
+    border-radius: 16px 0px 0px 0px;
+}
+.cnt-main .cnt-lft .rottenbig img{
+    border-radius: 16px 0px 0px 0px;
+    vertical-align: bottom;
+}
+.cnt-main .cnt-lft .percent{
+    font-size: 48pt;
+    font-weight: bold;
+    color: red;
+}
+.cnt-main .cnt-lft .inner{
+    display: grid;
+    grid-template-columns: 47% 47%;
+    column-gap: 2%;
+    padding: 2%;
+}
+.cnt-main .cnt-lft .inner .qbox{
+    font-size: 8pt;
+    font-weight: bold;
+    background-color: #E8DC9B;
+    border: solid 2px gray;
+    border-radius: 10px;
+    padding: 8px;
+}
+.cnt-main .cnt-lft .inner .qbox img{
+    margin-right: 5px;
+    vertical-align: top;
+}
+.cnt-main .cnt-lft .inner .reviewer{
+    margin-bottom: 20pt;
+}
+.cnt-main .cnt-lft .inner .reviewer .publication{
+    font-style: italic;
+}
+.cnt-main .cnt-lft .inner .reviewer img{
+    vertical-align: top;
+    float: left;
+}
+.cnt-main .cnt-rgt, #cntRGT {
+    background-color:#A2B964;
+    border-radius: 0px 16px 0px 0px;
+    border: solid 0px blue;
+    font-size: 8pt;
+    font-family: Arial, Helvetica, sans-serif;
+    grid-area: cntRGT;   
+    
+}
+.cnt-main .cnt-rgt .poster img{
+    border-radius: 0px 16px 0px 0px;
+    width: 246px; /*this has to reduce as layout must be at 800px including of 4px border left + 4px border right*/
+}
+.cnt-main .cnt-rgt dl{
+    padding: 0px 10pt;    
+}
+.cnt-main .cnt-rgt dt{
+    font-weight: bold;
+    margin: 10pt 0pt 0pt;
+}
+.cnt-main .cnt-rgt dd ul{
+    list-style: none;
+    padding-left: 0px;    
+}
+.cnt-main .cnt-foot, #cntFoot{
+    text-align: center;
+    border: solid 0px red;
+    grid-area: cntFoot;
+    background-color: #A2B964;
+    padding:5px;
+    border-radius: 0px 0px 16px 16px;
+}
+body .validate{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    opacity: 0.5;
+}
