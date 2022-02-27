@@ -1,0 +1,31 @@
+/*
+ Su Lai Myint - 613735 
+ W1D5 Assignment 4 Coding HTML Forms and Applying RegEx for Form Data Validation
+ CSS Styling for Webform 1 
+ Web form 1 using Boostrap though custom styling still require
+*/
+#form1.container {
+    margin-top:30px;
+}
+#form1.container .btn-submit{
+    color:white;
+    background-color:#007BFF;
+}
+#form1.container .btn-submit:hover{
+    background-color:#0266ca;
+    
+}
+#form1.container label{
+    padding: 6px 0px;
+}
+#form1.container .form-group{
+    margin-top: 8px;
+}
+#form1.container .email-note{
+    color: #899098;
+    font-size: 12px;
+}
+#form1.container .checkbox{
+    margin-top: 8px;
+}
+

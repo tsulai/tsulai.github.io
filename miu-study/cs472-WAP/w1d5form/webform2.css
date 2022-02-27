@@ -1,0 +1,86 @@
+/*
+ Su Lai Myint - 613735 
+ W1D5 Assignment 4 Coding HTML Forms and Applying RegEx for Form Data Validation
+ CSS Styling for Webform 2 
+ Web form 2 using Boostrap though custom styling still require
+*/
+h4{
+    color: #495057;
+}
+.navbar.bg-blue{
+    background-color: #3DAAE9;
+    
+}
+.navbar .navbar-title{
+    color: #ffffff;
+    margin-right: 50px;
+}
+.navbar-light .navbar-nav .nav-link{
+    color: #ffffff;
+}
+.navbar .navbar-nav .nav-item{
+    padding-left: 20px;
+    padding-right: 20px;
+    border-left: solid 1px #ffffff;
+}
+.navbar .hello{ 
+    margin-right: 10px;
+    padding-top: 5px;
+    color: #ffffff;
+}
+#form2.container{
+    border: solid 0px red;
+    padding-top: 80px;
+    height: 1000px;
+}
+#form2.container select {
+    background-color: #ffffff;
+    color: #6C757D;
+    border-color: #CED4DA;
+    width: 100%;
+    padding: 6px 3px;
+    border-radius: 3px;
+}
+#form2.container form{
+    padding: 15px;
+}
+#form2.container form .form-group label{
+    padding: 12px 0px 8px 0px;
+}
+#form2.container form .form-group .input-note{
+   font-size: small;
+   color: #6C757D;
+}
+#form2.container form .miu-btn-grp{
+    text-align: right;
+}
+#form2.container .miu-btn-grp button{
+    margin: 10px 0px 0px 25px;
+}
+#form2.container .miu-btn-grp .miu-btn-reset{    
+        color: #033C73;
+        border-color: #033C73;    
+}
+#form2.container .miu-btn-grp .miu-btn-reset:hover {
+    color: #fff;
+    background-color: #033C73;
+    border-color: #033C73;
+}
+#form2.container .miu-btn-grp .miu-btn-cancel{    
+    color: #DD5600;
+    border-color: #DD5600;    
+}
+#form2.container .miu-btn-grp .miu-btn-cancel:hover {
+color: #fff;
+background-color: #DD5600;
+border-color: #DD5600;
+}
+#form2.container .miu-btn-grp .miu-btn-add{    
+    color: #2FA4E7;
+    border-color: #2FA4E7;    
+}
+#form2.container .miu-btn-grp .miu-btn-add:hover {
+color: #fff;
+background-color: #2FA4E7;
+border-color: #2FA4E7;
+}
