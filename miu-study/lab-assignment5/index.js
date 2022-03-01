@@ -1,15 +1,16 @@
 //------------------------
-//Su Lai Myint - 613735 
-//Lab Assignment 5 - Intro to Javascript - Practice JS Coding Exercise Problems
+// Su Lai Myint - 613735 
+// Lab Assignment 5 - Intro to Javascript - Practice JS Coding Exercise Problems
+// Javascript Functions for Q1 - Q13
 //------------------------
 "use strict"
 //1.
-function max(x, y){
+const max = (x, y)=>{
     if(x > y) return x;
     else return y;
 }
 //2.
-function maxOfThree(x, y, z){
+const maxOfThree = (x, y, z) =>{
     let max;
     if(x > y) max = x;
     else max = y;
@@ -17,7 +18,7 @@ function maxOfThree(x, y, z){
     return max;
 }
 //3.
-function isVowel(c){
+const isVowel =(c) =>{
     if(c.length!= 1) return false;
     else{
         if(c == 'a' || c=='e' || c == 'i' || c=='o' || c=='u'){
@@ -28,30 +29,30 @@ function isVowel(c){
     }
 }
 //4.
-function sum(a){
+const sum = (a) =>{
     let sum = 0;
     for(let i =0; i<a.length; i++){
         sum += a[i];
     }
     return sum;
 }
-function multiply(a){
+const multiply = (a) =>{
     let mul = 1;
     for(let i =0; i<a.length; i++){
         mul *= a[i];
     }
     return mul;
 }
-//5.
-function reverse(str){
-    let rtn = '';
+//5. Imperative way
+const reverseStr= (str) => {
+    let rtn = '';    
     for(let i = str.length-1; i>=0; i--){
         rtn += str[i];
     }
     return rtn;
 }
-//6.
-function findLongestWord(a){
+//6. Imperative way
+const findLongestWord = (a) =>{
     let maxLen = a[0].length;
     for(let i = 1; i<a.length; i++){
         if(a[i].length > maxLen){
@@ -60,8 +61,11 @@ function findLongestWord(a){
     }
     return maxLen;
 }
-//7.
-function filterLongWords(a , i){
+//7. Functional way
+const filterLongWords2 = (a, i) => a.filter( w => w.length > i);
+
+//7. Imperative way
+const filterLongWords = (a , i) =>{
     let newA = new Array();
     for(let j=0; j<a.length; j++){
         if(a[j].length>i){
@@ -72,35 +76,29 @@ function filterLongWords(a , i){
     return newA;
 } 
 //8.
-function computeSumOfSquares(a){
-    return a.reduce((total, num) => total + (num * num),0);    
-}
+const computeSumOfSquares= (a) => a.reduce((total, num) => total + (num * num),0);
 //9.
-function printOddNumbersOnly(a){
-    return a.filter(v => v%2 !=0);
-    //print
-}
+const printOddNumbersOnly = (a) => a.filter(v => v%2 !=0);
+    
 //10.
-function computeSumOfSquaresOfEvensOnly(a){
+const computeSumOfSquaresOfEvensOnly = (a) => {
     let evenArr = a.filter(v => v%2 == 0);
     return evenArr.reduce((total, num) => total + (num * num),0);
     //0 is initial value for calculate accumulation, without putting 0, not getting correct result
 }
 //11.
-var sumByReduce = function(a){
-    return a.reduce((total, num) => total + num,0);
-}
-var multiplyByReduce = function(a){
-    return a.reduce((total, num) => total * num, 1);
-}
+const sumByReduce = (a) => a.reduce((total, num) => total + num,0);
+
+const multiplyByReduce = (a) => a.reduce((total, num) => total * num, 1);
+
 //12.
-var findSecondBiggest = function(a){
+const findSecondBiggest = (a) => {
     const max = a.reduce((a,b) => a > b ? a : b);
     a.splice(a.indexOf(max),1);// remove max from the array
     return Math.max.apply(null, a); // get the max of the array
 }
 //13.
-var printFibo = function(n,a,b){
+const printFibo = (n,a,b) =>{
     if(n <2) return 0;
     var s = new Array();
     s.push(a);
@@ -114,7 +112,7 @@ var printFibo = function(n,a,b){
 //-----------------------
 //document load
 //-----------------------
-window.onload = function(){
+window.onload = () =>{
     console.log('1.Calling function - max(4,9) is: ' + max(4,9));   
     console.log('2.Calling function - maxOfThree(12,50,6) is: ' + maxOfThree(12,50,6)); 
 
@@ -124,9 +122,9 @@ window.onload = function(){
     console.log('4.Calling function - sum([1,2,3,4]) is: ' + sum([1,2,3,4])); 
     console.log('4.Calling function - multiply([1,2,3,4]) is: ' + multiply([1,2,3,4])); 
 
-    console.log('5.Calling function - reverse(\'jag testar\') is: ' + reverse('jag testar')); 
+    console.log('5.Calling function - reverse(\'jag testar\') is: ' + reverseStr('jag testar')); 
     console.log('6.Calling function - findLongestWord([\'Apple\',\'Avogado\',\'Pineapple\']) is: ' + findLongestWord(['Apple','Avogado','Pineapple']));
-    console.log('7.Calling function - filterLongWords([\'Apple\',\'Avogado\',\'Pineapple\',\'Banana\',\'Mango\',\'Prune\'],6) is: ' + filterLongWords(['Apple','Avogado','Pineapple','Banana','Mango','Prune'], 6));
+    console.log('7.Calling function - filterLongWords([\'Apple\',\'Avogado\',\'Pineapple\',\'Banana\',\'Mango\',\'Prune\'],6) is: ' + filterLongWords2(['Apple','Avogado','Pineapple','Banana','Mango','Prune'], 6));
     console.log('8.Calling function - computeSumOfSquares([1,2,3]) is: ' + computeSumOfSquares([1,2,3])); 
     console.log('9.Calling function - printOddNumbersOnly([1,2,3,4]) is: ' + printOddNumbersOnly([1,2,3,4]));
     console.log('10.Calling function - computeSumOfSquaresOfEvensOnly([1,2,3,4,5]) is: ' + computeSumOfSquaresOfEvensOnly([1,2,3,4,5]));
