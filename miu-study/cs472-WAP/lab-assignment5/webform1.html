@@ -22,16 +22,16 @@
         <form id="FRMLogin"  >
             <div class="form-group">
               <label for="InputEmail">Email address</label>
-              <input type="email" class="form-control" id="InputEmail" placeholder="Enter email" required>
+              <input type="email" class="form-control" id="InputEmail" placeholder="Enter email" required pattern="[a-z0-9._+\-]+@[a-z0-9.\-]+\.[a-z]{2,3}">
               <span class="email-note">We'll never share your email with anyone else.</span>
             </div>
             <div class="form-group">
               <label for="InputPassword">Password</label>
-              <input type="password" required class="form-control" id="InputPassword" placeholder="Password" pattern="(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{10,}" title="Password field is at least 10 characters in length and contain at least one number and one uppercase and lowercase letter.">
+              <input type="password" required class="form-control" id="InputPassword" placeholder="Password" required pattern="(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{10,}" title="Password field is at least 10 characters in length and contain at least one number and one uppercase and lowercase letter.">
             </div>
             <div class="form-group">
                 <label for="InputURL">Website URL</label>
-                <input type="text" required class="form-control" id="InputURL" pattern="https?://.+" placeholder="Enter website URL">
+                <input type="text" required class="form-control" id="InputURL" pattern="https?://.+" placeholder="Enter website URL" required>
             </div>            
             <div class="checkbox">
               <label>

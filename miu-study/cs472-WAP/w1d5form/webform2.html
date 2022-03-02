@@ -50,26 +50,26 @@
                 <div class="col">
                     <div class="form-group">
                         <label for="InputProductNum">Product Number</label>
-                        <input type="text" class="form-control" id="InputProductNum" placeholder="">
+                        <input type="text" class="form-control" id="InputProductNum" placeholder="" required>
                     </div>
                     <div class="form-group">
                         <label for="InputName">Name</label>
-                        <input type="text" class="form-control" id="InputName" placeholder="">
+                        <input type="text" class="form-control" id="InputName" placeholder="" required>
                     </div>
                     <div class="form-group">
                         <label for="InputUPrice">Unit Price</label>
-                        <input type="text" class="form-control" id="InputUPrice" placeholder="0.0">
+                        <input type="text" class="form-control" id="InputUPrice" placeholder="0.0" required pattern="\d+\.\d+">
                     </div>
                 </div>
                 <div class="col">
                     <div class="form-group">
                         <label for="InputQStock">Quantity in stock</label>
-                        <input type="text" class="form-control" id="InputQStock" placeholder="0">
+                        <input type="text" class="form-control" id="InputQStock" placeholder="0" required pattern="\d*">
                     </div>
                     <div class="form-group">
                         <label for="InputSupplier">Supplier:</label>
-                        <select name="Supplier id="SelSupplier" >
-                            <option value="Select a supplier">Select a supplier</option>
+                        <select name="Supplier" id="SelSupplier" required>
+                            <option value="">Select a supplier</option>
                             <option value="volvo">Volvo</option>
                             <option value="saab">Saab</option>
                             <option value="mercedes">Mercedes</option>
@@ -78,7 +78,7 @@
                     </div>
                     <div class="form-group">
                         <label for="InputDateSupplied">Date supplied</label>
-                        <input type="text" class="form-control" id="InputQStock" placeholder="yyyy-mm-dd">
+                        <input type="text" class="form-control" required id="InputQStock" placeholder="yyyy-mm-dd" pattern="^\d{4}-\d{2}-\d{2}$">
                         <span class="input-note">Enter a valid Date.</span>
                     </div>                    
                 </div>
