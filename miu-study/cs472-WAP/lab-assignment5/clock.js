@@ -7,6 +7,7 @@
 // UnObstrucsive JS
 
 //-----------------------
+"use strict"
 window.onload = () => {
     const txtDTNow = document.getElementById('txtDTNow');
     var myInterval = setInterval(()=>{
