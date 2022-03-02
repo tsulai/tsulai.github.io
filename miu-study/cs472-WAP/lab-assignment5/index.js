@@ -2,6 +2,7 @@
 // Su Lai Myint - 613735 
 // Lab Assignment 5 - Intro to Javascript - Practice JS Coding Exercise Problems
 // Javascript Functions for Q1 - Q13
+// JS code based on high functional programming format
 //------------------------
 "use strict"
 //1.

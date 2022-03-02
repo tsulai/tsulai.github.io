@@ -83,3 +83,36 @@ color: #fff;
 background-color: #2FA4E7;
 border-color: #2FA4E7;
 }
+/**** Date Input ****/
+.date-cnt{
+    border: solid 0px blue;
+    position: relative;
+}
+.date-hdn {
+border: solid 0px red;
+width: 70px;
+height: 30px;
+position:absolute;
+top: 5px;
+right: 2px;
+}
+
+input.date-hdn:focus { 
+    outline:none;
+    border-color:none;
+    box-shadow:none;
+}
+/*
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+}
+*/
