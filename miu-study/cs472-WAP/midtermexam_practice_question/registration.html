@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HolyCross Medical Center - Registration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="css/main.css" rel="stylesheet" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-color fixed-top">
+        <div class="container-fluid">
+            <span class="navbar-title">HolyCross Medical Center</span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  current" href="registration.html">Patients</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <div class="hello">Welcome, Guest</div>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="hdr">
+            <h1>Patients Registration</h1>
+        </div>
+        <form id="frmReg">
+            <div class="row">
+                <div class="form-group">
+                    <label for="txtPID">*Patient ID No:</label>
+                    <input type="text" class="form-control" id="txtPID" required placeholder="EP-XXX-XXXXXX" pattern="EP-\d{3}-\d{6}">
+                    <span class="input-note">Enter the Patient ID Number, in the specified format</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="txtFirstName">*First Name:</label>
+                        <input type="text" class="form-control" id="txtFirstName" required placeholder="Enter First Name">
+                        <span class="input-note">Enter the Patient's First Name</span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="txtMiddleInitial">Middle Initial(s):</label>
+                        <input type="text" class="form-control" id="txtMiddleInitial" placeholder="Enter Middle Initial(s)">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="txtLastName">*Last Name</label>
+                        <input type="text" class="form-control" id="txtLastName" required placeholder="Enter Last Name">
+                        <span class="input-note">Enter the Patient's Last Name</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="txtDOB">*Date of birth:</label>
+                        <input type="text" class="form-control" id="txtDOB" required placeholder="mm/dd/yyyy" pattern="\d{2}/\d{2}/\d{4}">
+                        <span class="input-note">Enter the Patient's Date of birth</span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="InputSupplier">*Department:</label>
+                        <select name="selDepartment" id="selDepartment" required>
+                            <option value="">Select...</option>
+                            <option value="Cardiology">Cardiology</option>
+                            <option value="Ear, Nose and Throat">Ear, Nose and Throat</option>
+                            <option value="Primary Care">Primary Care</option>
+                            <option value="Unassigned">[Unassigned]</option>
+                        </select>
+                        <span class="input-note">Select the department providing care</span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label class="lblIsOutpatient">*Is this an Out-patient?</label>
+                        <div>
+                            <input required type="radio" id="rdoYes" name="isOutPatient" value="Yes" /><label for="rdoYes">Yes</label>
+                            <input required type="radio" id="rdoNo" name="isOutPatient" value="No" /><label for="rdoNo">No</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="ftr-btn-grp">
+                    <button type="reset" class="ftr-btn-reset">Reset</button>
+                    <button type="submit" class="ftr-btn-register">Register Patient</button>
+                </div>
+            </div>
+        </form>
+        <div class="patient-list">
+            <input type="checkbox" id="chkElderly" value="elderly" name="patientList" /><label for="chkElderly"> Show Elderly Patients only</label>
+            <input type="checkbox" id="chkOutPatient" name="patientList" value="out-patient" /><label for="chkOutPatient"> Show Out-Patients only</label>
+            <div id="divPList" class="cnt-pt-list">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Patient ID No</th>
+                            <th scope="col">First Name</th>
+                            <th scope="col">Middle initial(s)</th>
+                            <th scope="col">Last Name</th>
+                            <th scope="col">Date of birth</th>
+                            <th scope="col">Department</th>
+                            <th scope="col">Out-patient?</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tblPList">
+                        <!--<tr>
+                            <td>P-001-000001</td>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>Smith</td>
+                            <td>1955-05-05</td>
+                            <td>Eer, Nose and Throat</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td>P-001-000001</td>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>Smith</td>
+                            <td>1955-05-05</td>
+                            <td>Eer, Nose and Throat</td>
+                            <td>No</td>
+                        </tr>-->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <footer class="fixed-bottom">
+        <div class="left">O.Kalu ::: CS427-WAP</div>
+        <div class="right">HCMC &copy; May 2020</div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="js/registration.js" type="text/javascript"></script>
+</body>
+</html>

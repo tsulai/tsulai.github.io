@@ -1,0 +1,83 @@
+
+.navbar.bg-color{
+    background-color: #E95420;    
+}
+.navbar .navbar-title{
+    color: #ffffff;
+    margin-right: 50px;
+}
+.navbar-light .navbar-nav .nav-link {
+   color: #808080;
+}
+    .navbar-light .navbar-nav .current{
+    color: #ffffff;
+}
+.navbar .navbar-nav .nav-item{
+    padding-left: 20px;
+    padding-right: 20px;
+    border-left: solid 1px #ffffff;
+}
+.navbar .hello{ 
+    margin-right: 10px;
+    padding-top: 5px;
+    color: #ffffff;
+}
+.container{
+    border: solid 0px red;
+    padding-top: 80px;
+}
+.container select {
+    background-color: #ffffff;
+    color: #6C757D;
+    border-color: #CED4DA;
+    width: 100%;
+    padding: 6px 3px;
+    border-radius: 3px;
+}
+.container form{
+    padding: 15px;
+}
+.container form .form-group label{
+    padding: 12px 0px 8px 0px;
+}
+.container form .form-group .input-note{
+   font-size: small;
+   color: #6C757D;
+}
+.container form .ftr-btn-grp{
+    text-align: right;
+}
+.container .ftr-btn-grp button{
+    margin: 10px 0px 0px 10px;
+    padding: 5px  50px;
+    border-radius:2px;
+
+}
+.container .ftr-btn-grp .ftr-btn-reset {
+    color: #ffffff;
+    border-color: #AEA79F;
+    background-color: #AEA79F;
+}
+.container .ftr-btn-grp .ftr-btn-reset:hover {
+   /**/
+}
+.container .ftr-btn-grp .ftr-btn-register {
+    color: #ffffff;
+    border-color: #E95420;
+    background-color: #E95420;
+}
+
+.container .cnt-pt-list{
+    display:none;
+}
+
+    footer {
+        background: #AEA79F;
+    }
+footer .left {
+    float: left;
+}
+footer .right{
+    float:right;
+}
+
