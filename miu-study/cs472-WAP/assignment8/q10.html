@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 8 - Q10</title>
+    <link href="css/main.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>Assignment 8 - W3D1 - Objects, Modules Practice Exercises</h1>
+    <a href="q6nq7.html">Q6 - Q7</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="q8nq9.html">Q8 - Q9</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="q10.html">Q10</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="q11.html">Q11</a>
+    <h4>Q10. - Check console for the output. Check <a href="js/q10.js">q10.js</a></h4></h4>
+    <div class="box">
+        <pre>
+            'use strict'
+
+            const Employee = (function(){
+                let name, age, salary;
+                const setAge = function(newAge){
+                    age = newAge;
+                }
+                const setSalary = function(newSalary){
+                    salary = newSalary;
+                }
+                const setName = function(newName){
+                    name = newName;
+                }
+                const getAge = function(){
+                    return age;
+                }
+                const getSalary = function(){
+                    return salary;
+                }
+                const getName = function(){
+                    return name;
+                }
+                const increaseSalary = function(percentage){
+                    salary += getSalary() + (getSalary() * percentage)
+                }
+                const incrementAge = function(){
+                    this.setAge(this.getAge + 1);
+                }
+                return {
+                    setAge: setAge,
+                    setSalary: setSalary,
+                    setName: setName,
+                    increaseSalary: increaseSalary,
+                    incrementAge: incrementAge
+                }
+            })();
+            Employee.setName("Su Lai");
+            Employee.setAge("35");
+            Employee.setSalary("550000");
+            console.log(Employee);
+        </pre>
+    </div>
+    <script src="js/q10.js" type="text/javascript"></script>
+</body>
+</html>

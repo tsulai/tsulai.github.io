@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 8 - Q11</title>
+    <link href="css/main.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>Assignment 8 - W3D1 - Objects, Modules Practice Exercises</h1>
+    <a href="q6nq7.html">Q6 - Q7</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="q8nq9.html">Q8 - Q9</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="q10.html">Q10</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="q11.html">Q11</a>
+    <h4>Q11. - Check console for the output. Check <a href="js/q11.js">q11.js</a></h4></h4>
+    <div class="box">
+        <pre>
+    'use strict'
+    Employee.extension = (function(){    
+        return {
+            address : null,
+            setAddress: function(newAddress){
+                this.address = newAddress;
+            },
+            getAddress: function(){
+                return this.address;
+            }
+    
+            }
+    })();
+    Employee.extension.setAddress('1000 N 4th Street, Fairfield, Iowa, 52557');
+    console.log(Employee.extension.getAddress());
+        </pre>
+    </div>
+    <script src="js/q10.js" type="text/javascript"></script>
+    <script src="js/q11.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 8 - Q8 & Q9</title>
+    <link href="css/main.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>Assignment 8 - W3D1 - Objects, Modules Practice Exercises</h1>
+    <a href="q6nq7.html">Q6 - Q7</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="q8nq9.html">Q8 - Q9</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="q10.html">Q10</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="q11.html">Q11</a>
+    <h4>Q8. - Check console for the output. Check <a href="js/q8.js">q8.js</a></h4></h4>
+    <div class="box">
+        <pre>
+    'use strict'
+
+    const make_adder = function(inc){
+        let counter = 0;
+        const add = function(inc){          
+            return counter += inc;           
+        }
+        return function(){
+                return add(inc);       
+        }
+    }
+    const add5 = make_adder(5);
+    add5();
+    add5();
+    console.log('add5() final counter value is: ' + add5());
+    const add7 =make_adder(7);
+    add7();
+    add7();
+    console.log('add7() final counter value is: ' + add7());
+        </pre>
+    </div>
+    <h4>Q9. </h4>
+    <div class="box pad">
+        Use the module pattern IIFE to avoid declaring global variables/functions and it used by JavaScript libraries to keep global namespace clean.
+    </div>
+    <script src="js/q8.js" type="text/javascript"></script>
+</body>
+</html>
