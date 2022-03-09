@@ -35,7 +35,7 @@ const Employee = (function(){
     }
     const incrementAge = function(){
         age = getAge() + 1;
-        console.log('incrementAge: ' + age);
+        console.log('incrementAge: ' + getAge());
     }
     return {
         setAge: setAge,
