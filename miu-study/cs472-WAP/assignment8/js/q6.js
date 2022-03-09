@@ -1,5 +1,5 @@
 //Assignment 8 - W3D1 - Objects, Modules Practice Exercises
-//6
+//Q6
 //revealing module
 'use strict'
 const count = (function(){
