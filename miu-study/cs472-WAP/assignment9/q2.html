@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 9 - Q1</title>
+    <title>Assignment 9 - Q2</title>
     <link href="../assignment8/css/main.css" rel="stylesheet" />
 </head>
 <body>
     <h1>Assignment 9 - W3D2 - Using Inheritance</h1>
     <a href="q1.html">Q1</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="q2.html">Q2</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="q3.html">Q3</a>
-    <h4>Q1. - Check console for the output. Check <a href="q1.js">q1.js</a></h4>
+    <h4>Q2. - Check console for the output. Check <a href="q2.js">q2.js</a></h4>
     <div class="box">
         <pre>
     /* Assignment 9 - W3D2 - Using Inheritance
-    *  Q1
-    *  Object literal Person Object
-    *  Inheritance with Object.create()
+    *  Q2
+    *  An Employee IS-A person, applying JavaScript inheritance and 
+    *  the Object.create(…) method, create a generic object 
     */
-
+    
     'use strict'
 
     const person = {
@@ -31,20 +31,23 @@
             this.name = n;
         }
     }
-
-    const john = Object.create(person, {
-        name: {
-            value : 'John'
-        },
-        dateOfBirth: {
-            value: new Date('1998-12-10')
+    const employee = {
+        salary: 0,
+        hireDate: '',
+        doJob: function(title){
+            console.log(this.name + ' is a ' + title + ' who earns $' + this.salary.toFixed(2));
         }
-    })
+    }
+    employee.prototype = person;
 
-    console.log('The person\'s name is ' + john.getName());
-    console.log(john.getName() + ' was born on ' + john.dateOfBirth.toISOString().slice(0, 10));
+    const anna = Object.create(employee,{
+        name: { value: 'Anna'}, 
+        salary: {value : 249995.50 }
+    })
+    anna.doJob('Programmer');
+            
         </pre>
     </div>
-    <script src="q1.js" type="text/javascript"></script>
+    <script src="q2.js" type="text/javascript"></script>
 </body>
 </html>

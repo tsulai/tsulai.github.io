@@ -1,6 +1,7 @@
-// Assignment 8 - W3D1 - Objects, Modules Practice Exercises
-// Q11
-// Extend Employee Object - Module Extension
+/* Assignment 8 - W3D1 - Objects, Modules Practice Exercises
+* Q11
+* Extend Employee Object - Module Extension
+*/
 
 'use strict'
 
