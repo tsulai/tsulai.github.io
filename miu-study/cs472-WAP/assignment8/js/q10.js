@@ -8,36 +8,41 @@
 const Employee = (function(){
     let name = '', age = 0, salary = 0;
     
-    function getAge(){
-        age += 1;        
+    const getAge = function(){
+        return age;
+    }
+    const getSalary = function(){
+        return salary;
+    }
+    const getName = function(){
+        return name;
+    }
+    const setAge = function(newAge){
+        age = newAge;
+        console.log('setAge('+newAge +'): ' + age);
+    }
+    const setSalary = function(newSalary){
+        salary = newSalary;
+        console.log('setSalary: ' + salary);
+    }
+    const setName = function(newName){
+        name = newName;
+        console.log('setName: ' + name);
+    }
+    const increaseSalary = function(percentage){
+        salary += getSalary() * percentage/100;
+        console.log('increseSalary('+ percentage +'):' + getSalary());
+    }
+    const incrementAge = function(){
+        age = getAge() + 1;
         console.log('incrementAge: ' + age);
     }
-    function getSalary(percentage){
-        salary += salary * percentage/100;
-        console.log('increseSalary('+ percentage +'):' + salary);
-    }
-    function getName(){
-        console.log('getName: ' + name);
-    }   
     return {
-        setAge: function(newAge){
-            age = newAge;
-            console.log('setAge('+newAge +'): ' + age);
-        },
-        setSalary: function(newSalary){
-            salary = newSalary;
-            console.log('setSalary: ' + salary);
-        },
-        setName: function(newName){
-            name = newName;
-            console.log('setName: ' + name);
-        },
-        increaseSalary: function(percentage){
-            getSalary(percentage);
-        },
-        incrementAge: function(){
-            getAge();
-        }
+        setAge: setAge,
+        setSalary: setSalary,
+        setName:setName,
+        increaseSalary: increaseSalary,
+        incrementAge: incrementAge
     }
 })();
 Employee.setName("Su Lai");
@@ -47,4 +52,4 @@ Employee.setSalary(550000);
 Employee.incrementAge();
 Employee.increaseSalary(10);
 
-console.log(Employee);
+//console.log(Employee);
