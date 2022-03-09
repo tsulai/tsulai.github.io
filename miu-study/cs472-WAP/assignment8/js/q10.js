@@ -10,7 +10,7 @@ const Employee = (function(){
         console.log('incrementAge: ' + age);
     }
     function getSalary(percentage){
-        salary += salary + (salary * percentage/100);
+        salary += salary * percentage/100;
         console.log('increseSalary('+ percentage +'):' + salary);
     }
     function getName(){
