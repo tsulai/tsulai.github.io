@@ -18,8 +18,6 @@
         * Create Employee Object with Revealing Module Pattern
         */
         
-        'use strict'
-
         const Employee = (function(){
             let name = '', age = 0, salary = 0;
             
@@ -30,7 +28,7 @@
                 return salary;
             }
             const getName = function(){
-                console.log('getName: ' + name);
+                return name;
             }
             const setAge = function(newAge){
                 age = newAge;
@@ -50,7 +48,7 @@
             }
             const incrementAge = function(){
                 age = getAge() + 1;
-                console.log('incrementAge: ' + ageAge());
+                console.log('incrementAge: ' + getAge());
             }
             return {
                 setAge: setAge,
