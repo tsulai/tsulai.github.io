@@ -1,41 +1,47 @@
 //Q10
+//Revealing Module Pattern
 'use strict'
 
 const Employee = (function(){
-    let name, age, salary;
-    const setAge = function(newAge){
-        age = newAge;
+    let name = '', age = 0, salary = 0;
+    
+    function getAge(){
+        age += 1;        
+        console.log('incrementAge: ' + age);
     }
-    const setSalary = function(newSalary){
-        salary = newSalary;
+    function getSalary(percentage){
+        salary += salary + (salary * percentage/100);
+        console.log('increseSalary('+ percentage +'):' + salary);
     }
-    const setName = function(newName){
-        name = newName;
-    }
-    const getAge = function(){
-        return age;
-    }
-    const getSalary = function(){
-        return salary;
-    }
-    const getName = function(){
-        return name;
-    }
-    const increaseSalary = function(percentage){
-        salary += getSalary() + (getSalary() * percentage)
-    }
-    const incrementAge = function(){
-        this.setAge(this.getAge + 1);
-    }
+    function getName(){
+        console.log('getName: ' + name);
+    }   
     return {
-        setAge: setAge,
-        setSalary: setSalary,
-        setName: setName,
-        increaseSalary: increaseSalary,
-        incrementAge: incrementAge
+        setAge: function(newAge){
+            age = newAge;
+            console.log('setAge('+newAge +'): ' + age);
+        },
+        setSalary: function(newSalary){
+            salary = newSalary;
+            console.log('setSalary: ' + salary);
+        },
+        setName: function(newName){
+            name = newName;
+            console.log('setName: ' + name);
+        },
+        increaseSalary: function(percentage){
+            getSalary(percentage);
+        },
+        incrementAge: function(){
+            getAge();
+        }
     }
 })();
 Employee.setName("Su Lai");
-Employee.setAge("35");
-Employee.setSalary("550000");
+Employee.setAge(35);
+Employee.setSalary(550000);
+
+Employee.incrementAge();
+Employee.increaseSalary(10);
+
 console.log(Employee);
