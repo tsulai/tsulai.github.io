@@ -1,6 +1,7 @@
-//Assignment 8 - W3D1 - Objects, Modules Practice Exercises
-//Q10
-//Revealing Module Pattern
+// Assignment 8 - W3D1 - Objects, Modules Practice Exercises
+// Q10
+// Create Employee Object with Revealing Module Pattern
+
 'use strict'
 
 const Employee = (function(){

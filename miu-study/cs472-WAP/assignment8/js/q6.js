@@ -1,6 +1,8 @@
-//Assignment 8 - W3D1 - Objects, Modules Practice Exercises
-//Q6
-//revealing module
+// Assignment 8 - W3D1 - Objects, Modules Practice Exercises
+// Q6
+// Modify module into count object with add() and reset() 
+// revealing module
+
 'use strict'
 const count = (function(){
     let counter = 0;
