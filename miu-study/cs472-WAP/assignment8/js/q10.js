@@ -19,7 +19,7 @@ const Employee = (function(){
     }
     const setAge = function(newAge){
         age = newAge;
-        console.log('setAge('+newAge +'): ' + age);
+        console.log('setAge('+newAge +'): ' + getAge());
     }
     const setSalary = function(newSalary){
         salary = newSalary;
