@@ -27,7 +27,7 @@ const Employee = (function(){
     }
     const setName = function(newName){
         name = newName;
-        console.log('setName: ' + name);
+        console.log('setName: ' + getName());
     }
     const increaseSalary = function(percentage){
         salary += getSalary() * percentage/100;
