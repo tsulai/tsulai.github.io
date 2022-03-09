@@ -1,5 +1,6 @@
-//module factory
+//Assignment 8 - W3D1 - Objects, Modules Practice Exercises
 //Q8
+//module factory
 'use strict'
 
 const make_adder = function(inc){
