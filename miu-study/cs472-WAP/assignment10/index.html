@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 10</title>
+    <link href="../assignment8/css/main.css" rel="stylesheet" />
+    <script type="module" src="js/main.js"></script>
+</head>
+<body>
+    <h1>Lab Assignment 10 - W3D3 - Working with ES6 Classes and ES Module</h1>
+    <a href="#Q1">Q1</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#Q2">Q2</a>
+    <h4 id="Q1">Q1. - <a href="js/model/person.js">person.js</a>. Check console for the output.</h4>
+    <div class="box">
+        <pre>
+    /* LabAssignment 10 - W3D3 - Working with ES6 Classes and ES Module
+    * Q1 . person.js
+    * Define a JavaScript ES6 class named, Person
+    * Export Person 
+    */
+    
+    'use strict'
+    
+    export class Person {
+        #name = null;
+        #dateOfBirth = null;
+        
+        constructor(name, dateOfBirth){
+            this.#name = name;
+            this.#dateOfBirth = dateOfBirth;
+        }
+        getName() { return this.#name;}
+        getDateOfBirth() { return this.#dateOfBirth }
+    
+        setName(name) {
+            this.#name = name;
+        }
+        setDateOfBirth(dob){
+            this.#dateOfBirth = dob;
+        }
+        toString(){
+            return `{Name: ${this.getName()}, DateOfBirth: ${this.getDateOfBirth().toISOString().slice(0, 10)}}`
+        }
+    }          
+        </pre>
+    </div>
+    <h4>Q1. - <a href="js/main.js">main.js</a>. Check console for the output.</h4>
+    <div class="box">
+        <pre>
+    /* LabAssignment 10 - W3D3 - Working with ES6 Classes and ES Module
+    * Q1. main.js
+    * Define a JavaScript ES6 class named, Person
+    * Import Person class to main.js
+    */
+
+    'use strict'
+
+    import { Person } from "./model/person.js";
+    import { Employee } from "./model/employee.js"
+
+    const persons = [
+        new Person("Anna Smith", new Date(1998,11,15)),
+        new Person("Bob Jone", new Date(1945,10,16)),
+        new Person("Carlos Slim Helu", new Date(1976,8,24))
+    ]
+
+    persons.forEach( p => console.log(p.toString()));
+
+    const jim = new Employee("Jim Hanson", new Date(1945,10,16), 249995.50, new Date(2021,11,1));
+    jim.doJob('Software Engineer');
+        </pre>
+    </div>
+    <h4 id="Q2">Q2. - <a href="js/model/employee.js">employee.js</a>. Check console for the output.</h4>
+    <div class="box"> 
+        <pre>
+    /* LabAssignment 10 - W3D3 - Working with ES6 Classes and ES Module
+    * Q2. employee.js
+    * Employee IS-A person, define a sub-class named, Employee, 
+    * which inherits from Person class
+    */
+
+    'use strict'
+
+    import { Person } from "./person.js";
+
+    export class Employee extends Person {
+        #salary = null;
+        #hireDate = null;
+        constructor(name, dateOfBirth, salary, hireDate){
+            super(name, dateOfBirth);
+            this.#salary = salary;
+            this.#hireDate = hireDate;
+        }
+        getSalary(){return this.#salary}
+        getHireDate(){return this.#hireDate}
+
+        setSalary(value){
+            this.#salary = value
+        }
+        setHireDate(value){
+            this.#hireDate = value
+        }
+        doJob(title){
+            console.log(`${this.getName()} is a ${title} who earns $${this.getSalary().toFixed(2)}`);
+        }
+    }
+        </pre>
+    </div>
+</body>
+</html>
