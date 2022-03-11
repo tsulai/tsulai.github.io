@@ -78,7 +78,7 @@ $(function(){
             const $tdFn = $td.clone().html(p.getFirstName());
             const $tdMi = $td.clone().html(p.getMiddleInitial());
             const $tdLn = $td.clone().html(p.getLastName());
-            const $tdDob = $td.clone().html(new Intl.DateTimeFormat().format(p.getDOB()));
+            const $tdDob = $td.clone().html(p.getDOB().toISOString().slice(0, 10));
             const $tdDpm = $td.clone().html(p.getDepartment());
             const $tdIsOutpatient = $td.clone().html(p.getIsOutpatient());
             $tr.append([$tdId, $tdFn, $tdMi, $tdLn, $tdDob, $tdDpm, $tdIsOutpatient]);
@@ -90,7 +90,7 @@ $(function(){
             //console.log(`e: ${f.flagElder} && f:${f.flagOutP}`);
             let ftList = [];
             if(f.flagElder && f.flagOutP ){//both elderly & outpatient 
-                ftList = f.pData.filter(p => f.getAge(p.getDOB()) > 65 && p.getIsOutpatient() == 'Yes');
+                ftList = f.pData.filter(p => f.getAge(p.getDOB()) >= 65 && p.getIsOutpatient() == 'Yes');
                 this.$tbodyPatientsList.html('');
                 ftList.forEach(p => f.append(p));
             }
@@ -100,7 +100,7 @@ $(function(){
                 ftList.forEach(p => f.append(p));
             }
             else if(f.flagElder && !f.flagOutP ){//show elderly only
-                ftList = f.pData.filter(p => f.getAge(p.getDOB()) > 65 );
+                ftList = f.pData.filter(p => f.getAge(p.getDOB()) >= 65 );
                 this.$tbodyPatientsList.html('');
                 ftList.forEach(p => f.append(p));
             }
