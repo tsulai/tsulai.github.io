@@ -32,6 +32,8 @@ Table name: account
 Check DB configuration info under db\dbConfig.js
 
 
+###### Run the App
+- npx nodemon index.js
 
 
 
