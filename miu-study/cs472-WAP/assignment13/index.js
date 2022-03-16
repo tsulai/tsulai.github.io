@@ -8,10 +8,10 @@ const path = require("path");
 const app = express()
 // Define middlewares
 
-const port = 3000;
+const port = 5000;
 
  // setup the express HttpRequest body parser middleware
- app.use(express.urlencoded({ extended: false }));
+ app.use(express.urlencoded({ extended: false }));//to use req.body.
 
 console.log('Server started ...')
 app.get("/", (req, res, next) => {
@@ -21,6 +21,7 @@ app.get("/", (req, res, next) => {
 
 app.post("/result", (req, res, next) => {
     //console.log("Result page")
+    //console.log(req.body)
     const first = parseFloat(req.body.first)
     const second = parseFloat(req.body.second)    
     const action = req.body.action
