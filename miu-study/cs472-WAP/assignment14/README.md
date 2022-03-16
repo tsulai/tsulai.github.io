@@ -35,5 +35,9 @@ Check DB configuration info under db\dbConfig.js
 ###### Run the App
 - npx nodemon index.js
 
+![Minibank App Home Page](https://github.com/tsulai/tsulai.github.io/blob/master/miu-study/cs472-WAP/assignment14/screenshots/home.JPG)
+
+![Minibank App Account Page](https://github.com/tsulai/tsulai.github.io/blob/master/miu-study/cs472-WAP/assignment14/screenshots/account.JPG)
+
 
 
