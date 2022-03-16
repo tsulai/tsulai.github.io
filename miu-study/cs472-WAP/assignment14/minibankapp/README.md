@@ -18,10 +18,13 @@ Node js, Express js, pug, Nodemon, mysql2, mysql database
 ###### Install PUG
 - npm install pug
 
+###### Install MySQL
+- npm install mysql2
+
 ###### Set Up Database
 - Get create database.sql from assignment14\database\
 
-Run sql script in Database Server(MySQL or MSSQL) to create schema and data table \
+Run sql script in Database Server(MySQL) to create schema and data table \
 Schema name: minibank-db\
 Table name: account
 \
