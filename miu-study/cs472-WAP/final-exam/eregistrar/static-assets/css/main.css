@@ -1,0 +1,145 @@
+/* main-styles.css */
+/* author: O. Kalu */
+/* since: 2022-03-16 */
+
+body {
+    margin-bottom: 70px;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #f5f5f5;
+    line-height: 50px;
+}
+.error-text {
+    color: red;
+}
+/* button {
+    padding: 3em;
+} */
+
+/**** main - registration ***/
+
+html, body{
+    font-size: 13px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.navbar.bg-color{
+    background-color: #436C99;    
+}
+.navbar .navbar-title{
+    color: #ffffff;
+    margin-right: 50px;
+}
+.navbar-light .navbar-nav .nav-link {
+   color: #ffffff;
+   opacity: 0.6;
+}
+    .navbar-light .navbar-nav .current{
+    color: #ffffff;
+    opacity: 1;
+}
+.navbar .navbar-nav .nav-item{
+    padding-left: 20px;
+    padding-right: 20px;
+    border-left: solid 1px #ffffff;
+}
+.navbar .hello-time{ 
+    margin-right: 10px;
+    padding-top: 5px;
+    color: #ffffff;
+}
+.container{
+    border: solid 0px red;
+    padding-top: 60px;
+    padding-bottom: 50px;
+}
+.container select {
+    background-color: #ffffff;
+    color: #6C757D;
+    border-color: #CED4DA;
+    width: 100%;
+    padding: 6px 3px;
+    border-radius: 3px;
+}
+.container .cnt-box{
+    padding: 15px 0px 0px;
+}
+.container .cnt-img{
+    float: right;
+    margin: 0px 0px 10px 5px;
+}
+.container form{
+    padding: 15px;
+}
+.container form .form-group label{
+    padding: 12px 0px 8px 0px;
+}
+.container form .form-group .input-note{
+   font-size: 11px;
+   color: #6C757D;
+}
+.container form .ftr-btn-grp{
+    text-align: right;
+}
+.container .ftr-btn-grp button{
+    margin: 10px 0px 0px 10px;
+    padding: 7px  50px;
+    border-radius:3px;
+
+}
+.container .ftr-btn-grp .ftr-btn-reset {
+    color: #ffffff;
+    border: none;
+    background-color: #AEA79F;
+}
+
+.container .lblSpacing{
+    margin-left: 8px;
+}
+.container .rdoSpacing{
+    margin-left: 12px;
+}
+.container .chkOptRgt{
+    margin-left: 60px;
+}
+.container .ftr-btn-grp .ftr-btn-register {
+    color: #ffffff;
+    border: none;
+    background-color: #436C99;
+}
+footer {
+    background: #f5f5f5;
+    padding: 12px 12px;
+}
+footer .left {
+    float: left;
+}
+footer .right{
+    float:right;
+}
+
+/******* Su Lai Adde *******/
+form .ftr-btn-grp{
+    float: right;
+}
+.ftr-btn-grp button{
+    margin: 10px 0px 0px 10px;
+    padding: 7px  50px;
+    border-radius:3px;
+
+}
+.ftr-btn-grp .ftr-btn-reset {
+    color: #ffffff;
+    border: none;
+    background-color: #AEA79F;
+}
+
+
+.ftr-btn-grp .ftr-btn-register {
+    color: #ffffff;
+    border: none;
+    background-color: #436C99;
+}
