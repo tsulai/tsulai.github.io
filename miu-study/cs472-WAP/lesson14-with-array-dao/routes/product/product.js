@@ -13,14 +13,14 @@ const productDAO = require("../../db/dao/productDAO")
 const Product = require("../../model/product")
 
 //without qs, product listing will show data from Array hardcoded
-productRouter.get("/list", async (req, res, next) => {
+productRouter.get("/list", (req, res, next) => {
     console.log("Presenting list of products page")
     const products = productDAO.getProducts()
     res.render("product-list", {products: products}) 
 })
 
 //with qs, product listing will append data from qs
-productRouter.get("/list?", async (req, res, next) => {
+productRouter.get("/list?", (req, res, next) => {
     console.log("Presenting list of products page & Data Append from QS")
     const [products] = productDAO.getProducts()
     products.push(new Product(req.query.productNo, req.query.productName, req.query.unitPrice))
