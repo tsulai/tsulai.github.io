@@ -1,0 +1,86 @@
+/*Su Lai Myint - 613735
+    
+*/
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+  }
+  body {
+    background-color: #5B5E73;
+    color: #222331;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px; /*Set the fixed height of the footer here */
+    line-height: 60px; /* Vertically center the text there 
+    background-color: #f5f5f5;*/
+  }
+  
+  
+  /* Custom page CSS
+  -------------------------------------------------- */
+  /* Not required for template or sticky footer method. 
+  
+  .container {
+    width: auto;
+    max-width: 680px;
+    padding: 0 15px;
+  }
+  */
+  /* sulai: added */
+
+h1, h2, h3, h4, h5{
+    color: #111c6e;
+}
+
+body .main.container {    
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
+
+body  a{
+    text-decoration:  none;
+    color: #060f7c;
+}
+body a:hover{
+    color: rgb(202, 122, 3);
+    text-decoration: underline;
+}
+body .cnt-status {
+    background-color: #ececec;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+body .profile{
+    padding: 30px;
+    text-align: center; 
+    
+}
+
+body .profile img.me{
+    border-radius: 50%; 
+    border: solid 10px #5B5E73;
+    
+}
+body .profile .bio{
+    margin: 20px 0px;
+}
+
+body .cnt-main{    
+    padding-left: 50px;
+    padding-right: 30px;    
+    padding-bottom: 30px;
+    background-color: #ffffff;    
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+  .footer .container {
+      text-align: center;
+      color: #dddddd;
+  }
