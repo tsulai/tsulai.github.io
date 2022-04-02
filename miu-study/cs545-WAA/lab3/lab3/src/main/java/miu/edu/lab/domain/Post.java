@@ -17,5 +17,5 @@ public class Post {
     private String author;
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "postuser_id")
-    private PostUser postUser;
+    private PostUser postuser;
 }

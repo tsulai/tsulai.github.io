@@ -22,9 +22,6 @@ public class PostServiceImpl implements PostService{
     @Autowired
     PostUserRepo postUserRepo;
 
-    @PersistenceContext
-    EntityManager entityManager;
-
     @Autowired
     ModelMapper modelMapper;
 
@@ -43,10 +40,10 @@ public class PostServiceImpl implements PostService{
         // --- for join column data save ---
         Post newP = new Post();
         newP.setTitle(p.getTitle());
-        newP.setContent(p.getContent());
         newP.setAuthor(p.getAuthor());
+        newP.setContent(p.getContent());
         var user = postUserRepo.findById(p.getId());
-        newP.setPostUser(user);
+        newP.setPostuser(user);
         postRepo.save(newP);
     }
 
