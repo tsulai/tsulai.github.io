@@ -1,7 +1,7 @@
 package miu.edu.lab.controller;
 
 import miu.edu.lab.domain.Post;
-import miu.edu.lab.domain.dto.PostDto;
+import miu.edu.lab.dto.PostDto;
 import miu.edu.lab.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -26,9 +26,16 @@ public class PostController {
         return postService.getById(id);
     }
 
+    //http
+    @GetMapping("/getAllPostsByTitle/{t}")
+    public List<PostDto> getAllPostsByTitle(@PathVariable("t") String title){
+        //System.out.println(title);
+        return postService.getAllPostsMatchByTitle(title);
+    }
+
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public void addPost(@RequestBody Post post){
+    public void addPost(@RequestBody PostDto post){
         postService.addPost(post);
     }
 

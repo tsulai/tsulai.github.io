@@ -1,4 +1,4 @@
-package miu.edu.lab.domain.dto;
+package miu.edu.lab.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -12,4 +12,5 @@ public class PostDto {
     private String title;
     private String content;
     private String author;
+    private long userId;
 }

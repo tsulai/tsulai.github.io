@@ -11,14 +11,19 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "post_user")
 public class PostUser {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long id;
     String name;
+    //@OneToMany(cascade = CascadeType.PERSIST)//when user delete, it won't delete posts
     @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "user_id")
     @Fetch(FetchMode.JOIN)
-    @JoinColumn(name = "postuser_id")
     private List<Post> posts;
+
+    public PostUser(String name, List<Post> posts) {
+        this.name = name;
+        this.posts = posts;
+    }
 }

@@ -1,13 +1,14 @@
 package miu.edu.lab.service;
 
-import miu.edu.lab.domain.Comment;
-import miu.edu.lab.domain.dto.CommentDto;
+import miu.edu.lab.dto.CommentDto;
 
 import java.util.List;
 
 public interface CommentService {
-    List<Comment> findAll();
+    List<CommentDto> findAll();
     public CommentDto getById(long id);
+    public void addComment (CommentDto c);
+    public void deleteComment(long id);
 
 
 }

@@ -1,4 +1,4 @@
-package miu.edu.lab.domain.dto;
+package miu.edu.lab.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
