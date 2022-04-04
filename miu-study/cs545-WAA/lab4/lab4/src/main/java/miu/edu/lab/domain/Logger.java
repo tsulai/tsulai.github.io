@@ -1,8 +1,6 @@
 package miu.edu.lab.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,7 +9,9 @@ import javax.persistence.Id;
 import java.time.LocalDateTime;
 import java.util.Date;
 
-@Data
+@Setter
+@Getter
+@ToString
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -25,5 +25,10 @@ public class Logger {
     private String operation;
 
 
+    public Logger(LocalDateTime date, String principle, String operation) {
 
+        this.date = date;
+        this.principle = principle;
+        this.operation = operation;
+    }
 }

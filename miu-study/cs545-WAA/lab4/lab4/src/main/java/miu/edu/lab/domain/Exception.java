@@ -1,8 +1,6 @@
 package miu.edu.lab.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,7 +8,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.time.LocalDateTime;
 
-@Data
+@Setter
+@Getter
+@ToString
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -23,4 +23,11 @@ public class Exception {
     private String operation;
     private String exceptionType;
 
+    public Exception(LocalDateTime date, String principle, String operation, String exceptionType) {
+
+        this.date = date;
+        this.principle = principle;
+        this.operation = operation;
+        this.exceptionType = exceptionType;
+    }
 }

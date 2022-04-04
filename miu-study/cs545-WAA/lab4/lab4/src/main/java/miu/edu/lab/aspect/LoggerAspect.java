@@ -23,8 +23,18 @@ public class LoggerAspect {
     @Autowired
     ExceptionService exceptionService;
 
+    /**
+     * Note: There is an error if I try log all execution in project.
+     * Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Handler dispatch failed; nested exception is java.lang.StackOverflowError] with root cause java.lang.StackOverflowError: null
+     * Seem the error related to framework level
+     * Due to limited capability and time on spring framework
+     * I have only logged all execution inside controller folder for this lab
+     *
+     */
+
     //@Pointcut("within(miu.edu.lab..*)")
-    @Pointcut("execution(* miu.edu.lab.*.*(..))")
+    //@Pointcut("execution(* miu.edu.lab.*.*(..))")
+    @Pointcut("execution(public * miu.edu.lab.controller.*.*(..))")
     public void logAllOperations(){//make sure this map to advice
 
     }
@@ -50,6 +60,7 @@ public class LoggerAspect {
         newEx.setExceptionType(ex.getMessage());
         exceptionService.save(newEx);
         //Note: added fake error in PostUserController getPostUsers
+        //try getPostUsers to see exception logged to db
         System.out.println("=============================================");
         System.out.println("**** Logged Thrown Exception from method : " + joinPoint.getSignature().getName());
         System.out.println("=============================================");
