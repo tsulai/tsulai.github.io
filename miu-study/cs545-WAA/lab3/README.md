@@ -1,13 +1,27 @@
-##### @ExecutionTime - for getUserById 
-![alt text](https://github.com/tsulai/tsulai.github.io/blob/master/miu-study/cs545-WAA/lab4/screenshots/calculate-execution-time-for-getUserById.JPG)
+##### Data in DB 
+![alt text](https://github.com/tsulai/tsulai.github.io/blob/master/miu-study/cs545-WAA/lab3/screenshots/database-table-post-user.JPG)
 
-##### Save Execution to Logger
-![alt text](https://github.com/tsulai/tsulai.github.io/blob/master/miu-study/cs545-WAA/lab4/screenshots/logger-save-to-db-console.JPG)
+![alt text](https://github.com/tsulai/tsulai.github.io/blob/master/miu-study/cs545-WAA/lab3/screenshots/database-table-post.JPG)
 
-![alt text](https://github.com/tsulai/tsulai.github.io/blob/master/miu-study/cs545-WAA/lab4/screenshots/logger-save-to-db.JPG)
+![alt text](https://github.com/tsulai/tsulai.github.io/blob/master/miu-study/cs545-WAA/lab3/screenshots/database-table-comment.JPG)
 
-##### Save Error Exception to Exception
+##### DELETE User
+![alt text](https://github.com/tsulai/tsulai.github.io/blob/master/miu-study/cs545-WAA/lab3/screenshots/DELETE-user.JPG)
 
-![alt text](https://github.com/tsulai/tsulai.github.io/blob/master/miu-study/cs545-WAA/lab4/screenshots/exception-save-to-db-console.JPG)
+![alt text](https://github.com/tsulai/tsulai.github.io/blob/master/miu-study/cs545-WAA/lab3/screenshots/DELETE-user-db-table-post-user.JPG)
 
-![alt text](https://github.com/tsulai/tsulai.github.io/blob/master/miu-study/cs545-WAA/lab4/screenshots/exception-save-to-db.JPG)
+![alt text](https://github.com/tsulai/tsulai.github.io/blob/master/miu-study/cs545-WAA/lab3/screenshots/DELETE-user-db-table-post.JPG)
+
+![alt text](https://github.com/tsulai/tsulai.github.io/blob/master/miu-study/cs545-WAA/lab3/screenshots/DELETE-user-db-table-comment.JPG)
+
+![alt text](https://github.com/tsulai/tsulai.github.io/blob/master/miu-study/cs545-WAA/lab3/screenshots/DELETE-user-hibernate.JPG)
+
+##### GET
+
+![alt text](https://github.com/tsulai/tsulai.github.io/blob/master/miu-study/cs545-WAA/lab3/screenshots/GET-all-posts-by-Title.JPG)
+
+![alt text](https://github.com/tsulai/tsulai.github.io/blob/master/miu-study/cs545-WAA/lab3/screenshots/GET-users-who-made-posts-by-title.JPG)
+
+![alt text](https://github.com/tsulai/tsulai.github.io/blob/master/miu-study/cs545-WAA/lab3/screenshots/GET-users-with-more-than-n-posts.JPG)
+
+![alt text](https://github.com/tsulai/tsulai.github.io/blob/master/miu-study/cs545-WAA/lab3/screenshots/GET-getCommentByIdFromPostByIdFromUserById.JPG)
