@@ -1,11 +1,13 @@
-package miu.edu.lab.service;
+package edu.miu.springsecurity1.service.impl;
 
-import miu.edu.lab.domain.Comment;
-import miu.edu.lab.domain.Post;
-import miu.edu.lab.dto.PostDto;
-import miu.edu.lab.helper.ListMapper;
-import miu.edu.lab.repo.PostRepo;
-import miu.edu.lab.repo.PostUserRepo;
+import edu.miu.springsecurity1.entity.Comment;
+import edu.miu.springsecurity1.entity.Post;
+import edu.miu.springsecurity1.entity.dto.PostDto;
+import edu.miu.springsecurity1.repository.PostRepo;
+import edu.miu.springsecurity1.repository.PostUserRepo;
+import edu.miu.springsecurity1.service.CommentService;
+import edu.miu.springsecurity1.service.PostService;
+import edu.miu.springsecurity1.util.ListMapper;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,7 +15,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class PostServiceImpl implements PostService{
+public class PostServiceImpl implements PostService {
 
     @Autowired
     PostRepo postRepo;

@@ -26,7 +26,7 @@ public class LoggerAspect {
     /**
      * Note: There is an error if I try log all execution in project.
      * Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Handler dispatch failed; nested exception is java.lang.StackOverflowError] with root cause java.lang.StackOverflowError: null
-     * Seem the error related to framework level
+     * Seem the error related to framework level, regarding constructor and @autowired issues
      * Due to limited capability and time on spring framework
      * I have only logged all execution inside controller folder for this lab
      *

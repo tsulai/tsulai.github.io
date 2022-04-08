@@ -1,7 +1,7 @@
-package miu.edu.lab.service;
+package edu.miu.springsecurity1.service;
 
-import miu.edu.lab.domain.Post;
-import miu.edu.lab.dto.PostDto;
+import edu.miu.springsecurity1.entity.Post;
+import edu.miu.springsecurity1.entity.dto.PostDto;
 
 import java.util.List;
 

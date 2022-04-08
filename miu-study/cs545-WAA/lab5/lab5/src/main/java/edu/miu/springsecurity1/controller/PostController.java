@@ -1,8 +1,8 @@
-package miu.edu.lab.controller;
+package edu.miu.springsecurity1.controller;
 
-import miu.edu.lab.domain.Post;
-import miu.edu.lab.dto.PostDto;
-import miu.edu.lab.service.PostService;
+import edu.miu.springsecurity1.entity.Post;
+import edu.miu.springsecurity1.entity.dto.PostDto;
+import edu.miu.springsecurity1.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/posts")
+@RequestMapping("/api/v1/posts")
 public class PostController {
 
     @Autowired
@@ -28,26 +28,11 @@ public class PostController {
     }
 
     //http
-    @GetMapping("/getAllPostsByTitle/{t}/post")
+    @GetMapping("/getAllPostsByTitle/{t}")
     public List<PostDto> getAllPostsByTitle(@PathVariable("t") String title){
         //System.out.println(title);
         return postService.getAllPostsMatchByTitle(title);
     }
-
-//    @GetMapping()// တူတာ၂ခုရှိလို့မရ
-//    public List<PostDto> getAllPostsByTitleRP(@RequestParam("filter") String title){
-//        return postService.getAllPostsMatchByTitle(title);
-//    }
-
-    //-----------------------------
-    //RequestParam Demo
-    //-----------------------------
-//    @GetMapping("/demo")
-//    public String printSomething(@RequestParam("filter") int price){//can do value=filer
-//        return "" + price; //this is converting to string
-//    }
-    //test in postman GET > http://localhost:8080/api/v1/products/demo?filter=400
-    //it will return 400, which is the param value passed
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
