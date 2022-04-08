@@ -28,7 +28,7 @@ public class PostController {
     }
 
     //http
-    @GetMapping("/getAllPostsByTitle/{t}/post")
+    @GetMapping("/getAllPostsByTitle/{t}")
     public List<PostDto> getAllPostsByTitle(@PathVariable("t") String title){
         //System.out.println(title);
         return postService.getAllPostsMatchByTitle(title);
