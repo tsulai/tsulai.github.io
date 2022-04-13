@@ -31,8 +31,9 @@ public class CommentServiceImpl implements CommentService {
     }
 
     @Override
-    public CommentDto getById(long id) {
-        return null;
+    public List<CommentDto> getByPostId(long id) {
+        System.out.println("================ service ====================");
+        return (List<CommentDto>) listMapperCommentToDto.mapList(commentRepo.findByPostId(id), new CommentDto());
     }
 
     @Override
