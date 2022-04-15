@@ -24,7 +24,7 @@ export default function PostDetail({ changeFetchFlag }) {
               if (error.response && error.response.status === 403) {
                 AuthService.logout();
                 navigate("/login");
-                window.location.reload();
+                //window.location.reload();
               }
             }
           );
@@ -42,7 +42,7 @@ export default function PostDetail({ changeFetchFlag }) {
                   if (error.response && error.response.status === 403) {
                     AuthService.logout();
                     navigate("/login");
-                    window.location.reload();
+                    //window.location.reload();
                   }
                 }
               );

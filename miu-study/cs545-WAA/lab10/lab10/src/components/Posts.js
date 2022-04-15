@@ -25,11 +25,12 @@ export default function Posts({ fetchFlag }) {
           },
           (error) => {
             console.log("Private page", error.response);
+            //navigate("/login");
             // Invalid token
             if (error.response && error.response.status === 403) {
               AuthService.logout();
               navigate("/login");
-              window.location.reload();
+              //window.location.reload();
             }
           }
         );

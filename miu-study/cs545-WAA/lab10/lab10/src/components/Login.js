@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { useNavigate } from "react-router-dom";
 import AuthService from "../services/AuthService"
 
-//https://www.youtube.com/watch?v=XWj18K4Uhg8
 export default function Login() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -17,7 +16,7 @@ export default function Login() {
                 () => {
                     console.log('LoggedIn local storage: ' + localStorage.getItem("user"))
                     navigate("/posts");
-                    window.location.reload();
+                    //window.location.reload();
                 },
                 (error) => {
                     console.log(error);
