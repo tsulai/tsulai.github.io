@@ -21,7 +21,7 @@ npm install react-router-dom / yarn add react-router-dom <br>
 
 #### Login in JWT
 ![alt text](https://github.com/tsulai/tsulai.github.io/blob/master/miu-study/cs545-WAA/lab10/screenshots/login.JPG)
-#### Login in JWT - User Logged In
+#### Login in JWT - User Logged In - Redirected to Post
 ![alt text](https://github.com/tsulai/tsulai.github.io/blob/master/miu-study/cs545-WAA/lab10/screenshots/loggedIn.JPG)
 ![alt text](https://github.com/tsulai/tsulai.github.io/blob/master/miu-study/cs545-WAA/lab10/screenshots/loggedIn-new-post.JPG)
 #### Login in JWT - Post Delete and Redirected to Post
