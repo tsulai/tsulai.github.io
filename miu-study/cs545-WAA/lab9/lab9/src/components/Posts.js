@@ -23,7 +23,7 @@ export default function Posts({ fetchFlag, clickedItem }) {
 
     useEffect(() => {
         fetchPosts();
-    }, [fetchFlag])
+    }, [fetchFlag])//<AddPost> က အသစ်ထည့်ပြီးတာနဲ့ res ပြန်လာရင် changeFetchFlag() ကို ခေါ်လိုက်တာ ဒီမှာဖမ်းထားပြီး ပြန်load ပေးတာ 
 
     /* lab 8 - clicked Item id pass via props Post > Posts > Dashboard
     const handleClick = (id) => {//Post(Child) က ပြန်pass လိုက်တဲ့ id ကိုဖမ်း, 
