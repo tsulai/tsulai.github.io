@@ -3,8 +3,8 @@
 -React <br>
 -Axios <br>
 -Boostrap <br>
-npm install axios <br>
-npm install --save bootstrap 
+npm install axios / yarn add axios<br>
+npm install --save bootstrap / yarn add bootstrap --save
 ##### Backend
 -Lab4 Spring Boot API
 ##### Post List, Add Post, Post Detail
