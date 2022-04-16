@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from "react-router-dom";
 import AuthService from "../services/AuthService"
 
@@ -16,7 +16,7 @@ export default function Login() {
                 () => {
                     console.log('LoggedIn local storage: ' + localStorage.getItem("user"))
                     navigate("/posts");
-                    //window.location.reload();
+                    window.location.reload();
                 },
                 (error) => {
                     console.log(error);
@@ -26,6 +26,12 @@ export default function Login() {
             console.log(err);
         }
     }
+
+    useEffect(()=>{
+        if(AuthService.getCurrentUser !== ''){
+            navigate("/posts")
+        }
+    },[])
 
     return (
         <div  className="container-sm" style={{'width': '40%'}}>

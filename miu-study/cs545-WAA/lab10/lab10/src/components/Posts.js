@@ -34,7 +34,7 @@ export default function Posts({ fetchFlag }) {
             }
           }
         );
-      }, []);
+      }, [posts]);
    
     return (
         <div>
