@@ -8,8 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
-@CrossOrigin
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/api/v1/posts")
 public class PostController {
@@ -44,6 +43,7 @@ public class PostController {
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.ACCEPTED)
     public void deletePost(@PathVariable("id") long id){
+        System.out.println("===========CONTROLLER - DELETE BY ID: " + id + "===========");
         postService.deletePost(id);
     }
 

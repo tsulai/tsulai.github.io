@@ -3,26 +3,8 @@ import axios from 'axios'
 
 export default function AddPost({ changeFetchFlag }) {
     console.log('RENDER ADD POST')
-    /*
-    With useRef
-    1. No more state (useState)
-    2. No more onChange Handler binding
-    */
-
-    const newPostForm = useRef();
-    /*
-    //can do access to particular element using useRef
-    const postTitle = useRef();
-    <input ref={postTitle} name={title} />
-    */
-
-    /*With useRef -No more state (useState)
-    const [post, setPost] = useState({
-        title: '',
-        author: '',
-        content: '',
-        userId: ''
-    })*/
+    
+    const newPostForm = useRef();    
 
     const [validate, setValidate] = useState({})
     const addPost = () => {
@@ -52,29 +34,12 @@ export default function AddPost({ changeFetchFlag }) {
             addPost();
         }
     },[])
-
-    /*
-    With useRef - No more onChange Handler binding
-    const handleOnChange = (e) => {        
-       setPost({ ...post, [e.target.name]: e.target.value })
-       
-    }
-    */
+  
     const handleReset = () =>{
         const form = newPostForm.current;
         form['title'].value = '';
         form['author'].value = '';
         form['content'].value = '';
-
-        /* With useRef - no more assign to state
-        let cleanPost = {
-            title: '',
-            author: '',
-            content: '',
-            userId: ''
-        }
-        setPost(cleanPost)
-        */
     }
 
     const validateForm = () =>{

@@ -56,7 +56,8 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public void deletePost(long id) {
-            postRepo.deleteById(id);
+        System.out.println("===========SERVICE - DELETE BY ID: " + id + "===========");
+        postRepo.deleteById(id);
 
     }
 

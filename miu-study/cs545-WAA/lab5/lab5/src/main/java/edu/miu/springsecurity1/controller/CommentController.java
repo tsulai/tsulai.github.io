@@ -7,7 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-@CrossOrigin
+
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/api/v1/comments")
 public class CommentController {
@@ -17,6 +18,12 @@ public class CommentController {
     @GetMapping
     public List<CommentDto> getComment(){
        return commentService.findAll();
+    }
+
+    @GetMapping("/post/{id}")
+    public List<CommentDto> getByPostId(@PathVariable("id")Long id){
+        System.out.println("================ controller ====================");
+        return commentService.getByPostId(id);
     }
 
     @PostMapping()

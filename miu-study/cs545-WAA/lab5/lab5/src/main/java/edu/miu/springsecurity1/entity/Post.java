@@ -18,7 +18,9 @@ public class Post {
     private String title;
     private String content;
     private String author;
-    @ManyToOne(cascade = CascadeType.ALL)
+    //sulai: 15 Apr 2022 removed the CascadeType.ALL
+    //as deleting post by Id effect cascade delete the other post with same user_id
+    @ManyToOne()
     private PostUser user;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "post")

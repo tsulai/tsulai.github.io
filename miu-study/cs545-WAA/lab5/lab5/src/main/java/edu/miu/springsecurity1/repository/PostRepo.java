@@ -18,6 +18,8 @@ public interface PostRepo extends CrudRepository<Post, Long> {
     @Query(value = "SELECT * FROM post p WHERE p.user_id = :id", nativeQuery = true)
     public List<Post> getPostsByUserId(long id);
 
+    @Query(value = "DELETE FROM post p WHERE p.id = :id", nativeQuery = true)
+    public void deletePost(long id);
 
     /*public Post getById(long id);
     public void addPost(Post p);
